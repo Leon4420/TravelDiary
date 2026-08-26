@@ -1,0 +1,146 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$blogcase-demo-salt$hRRXpx8YZogjXTociedQ9Tb7X915y4xHrV2za+cufIE=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "alice",
+      "first_name": "Алиса",
+      "last_name": "",
+      "email": "alice@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-08-10T08:00:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$blogcase-demo-salt$hRRXpx8YZogjXTociedQ9Tb7X915y4xHrV2za+cufIE=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "bob",
+      "first_name": "Борис",
+      "last_name": "",
+      "email": "bob@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-08-10T08:10:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$blogcase-demo-salt$hRRXpx8YZogjXTociedQ9Tb7X915y4xHrV2za+cufIE=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "carol",
+      "first_name": "Карина",
+      "last_name": "",
+      "email": "carol@example.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2026-08-10T08:20:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "journal.travel",
+    "pk": 1,
+    "fields": {
+      "author": 1,
+      "title": "Весенний Берлин",
+      "country": "Германия",
+      "city": "Берлин",
+      "start_date": "2026-04-12",
+      "end_date": "2026-04-17",
+      "cost": "78000.00",
+      "heritage_sites": "Музейный остров, Берлинский кафедральный собор, дворец Шарлоттенбург.",
+      "places_to_visit": "Рейхстаг, Бранденбургские ворота, Тиргартен, Александерплац.",
+      "notes": "Поездка получилась насыщенной: музеи удобно объединять по районам, а для центра лучше выделить отдельный день.",
+      "created_at": "2026-04-20T10:00:00Z",
+      "updated_at": "2026-04-20T10:00:00Z"
+    }
+  },
+  {
+    "model": "journal.travel",
+    "pk": 2,
+    "fields": {
+      "author": 1,
+      "title": "Неделя в Риме",
+      "country": "Италия",
+      "city": "Рим",
+      "start_date": "2026-06-03",
+      "end_date": "2026-06-09",
+      "cost": "115000.00",
+      "heritage_sites": "Колизей, Римский форум, Пантеон, исторический центр Рима.",
+      "places_to_visit": "Ватиканские музеи, площадь Навона, вилла Боргезе, район Трастевере.",
+      "notes": "Билеты в популярные музеи лучше покупать заранее. Пешие маршруты по центру занимают большую часть дня.",
+      "created_at": "2026-06-12T09:00:00Z",
+      "updated_at": "2026-06-12T09:00:00Z"
+    }
+  },
+  {
+    "model": "journal.travel",
+    "pk": 3,
+    "fields": {
+      "author": 2,
+      "title": "Старинная Прага",
+      "country": "Чехия",
+      "city": "Прага",
+      "start_date": "2026-05-14",
+      "end_date": "2026-05-18",
+      "cost": "62000.00",
+      "heritage_sites": "Исторический центр Праги, Пражский град, собор Святого Вита.",
+      "places_to_visit": "Карлов мост, Староместская площадь, Петршинский холм.",
+      "notes": "Центральные районы удобно осматривать пешком, но утром на основных маршрутах заметно меньше людей.",
+      "created_at": "2026-05-21T11:00:00Z",
+      "updated_at": "2026-05-21T11:00:00Z"
+    }
+  },
+  {
+    "model": "journal.travel",
+    "pk": 4,
+    "fields": {
+      "author": 2,
+      "title": "Белые ночи в Санкт-Петербурге",
+      "country": "Россия",
+      "city": "Санкт-Петербург",
+      "start_date": "2026-06-20",
+      "end_date": "2026-06-25",
+      "cost": "68000.00",
+      "heritage_sites": "Исторический центр, Эрмитаж, Петропавловская крепость, Петергоф.",
+      "places_to_visit": "Невский проспект, Новая Голландия, Летний сад, набережные Невы.",
+      "notes": "На Эрмитаж нужен отдельный день, а поездку в Петергоф удобнее запланировать при хорошей погоде.",
+      "created_at": "2026-06-28T12:00:00Z",
+      "updated_at": "2026-06-28T12:00:00Z"
+    }
+  },
+  {
+    "model": "journal.travel",
+    "pk": 5,
+    "fields": {
+      "author": 3,
+      "title": "Осенний Киото",
+      "country": "Япония",
+      "city": "Киото",
+      "start_date": "2025-11-05",
+      "end_date": "2025-11-12",
+      "cost": "245000.00",
+      "heritage_sites": "Храмы Киёмидзу-дэра, Кинкакудзи и Рёан-дзи, исторические районы города.",
+      "places_to_visit": "Бамбуковая роща Арасияма, район Гион, тропа Философа, рынок Нисики.",
+      "notes": "Осенью популярные сады особенно загружены, поэтому посещения лучше начинать сразу после открытия.",
+      "created_at": "2025-11-16T08:00:00Z",
+      "updated_at": "2025-11-16T08:00:00Z"
+    }
+  }
+]

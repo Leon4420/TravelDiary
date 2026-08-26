@@ -1,0 +1,24 @@
+{% extends "journal/base.html" %}
+{% block title %}Мои путешествия{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="h3 mb-0">Мои путешествия</h1>
+    <a class="btn btn-primary" href="{% url 'travel_create' %}">Новая запись</a>
+</div>
+<div class="list-group">
+    {% for travel in travels %}
+        <div class="list-group-item d-flex justify-content-between align-items-center gap-3">
+            <div>
+                <strong>{{ travel.title }}</strong>
+                <div class="text-secondary">{{ travel.country }}, {{ travel.city }} · {{ travel.start_date|date:"d.m.Y" }}</div>
+            </div>
+            <div class="text-nowrap">
+                <a class="btn btn-outline-primary btn-sm" href="{% url 'travel_detail' travel.pk %}">Открыть</a>
+                <a class="btn btn-outline-secondary btn-sm" href="{% url 'travel_update' travel.pk %}">Изменить</a>
+            </div>
+        </div>
+    {% empty %}
+        <div class="list-group-item">У вас пока нет записей.</div>
+    {% endfor %}
+</div>
+{% endblock %}

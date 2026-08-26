@@ -1,0 +1,29 @@
+{% extends "journal/base.html" %}
+{% block title %}{{ travel.title }}{% endblock %}
+{% block content %}
+<article class="card shadow-sm">
+    <div class="card-body">
+        <div class="d-flex justify-content-between gap-3">
+            <div>
+                <h1 class="h3">{{ travel.title }}</h1>
+                <p class="text-secondary">{{ travel.country }}, {{ travel.city }} · {{ travel.author.username }}</p>
+            </div>
+            <span class="badge text-bg-light border align-self-start">{{ travel.start_date|date:"d.m.Y" }}–{{ travel.end_date|date:"d.m.Y" }}</span>
+        </div>
+        <p><strong>Продолжительность:</strong> {{ travel.duration_days }} дн.</p>
+        <p><strong>Стоимость путешествия:</strong> {{ travel.cost }} ₽</p>
+        <h2 class="h5 mt-4">Места культурного наследия</h2>
+        <div class="content-text">{{ travel.heritage_sites|linebreaks }}</div>
+        <h2 class="h5 mt-4">Места для посещения</h2>
+        <div class="content-text">{{ travel.places_to_visit|linebreaks }}</div>
+        <h2 class="h5 mt-4">Описание и впечатления</h2>
+        <div class="content-text">{{ travel.notes|linebreaks }}</div>
+        {% if user == travel.author %}
+            <div class="mt-4 d-flex gap-2">
+                <a class="btn btn-outline-primary btn-sm" href="{% url 'travel_update' travel.pk %}">Редактировать</a>
+                <a class="btn btn-outline-danger btn-sm" href="{% url 'travel_delete' travel.pk %}">Удалить</a>
+            </div>
+        {% endif %}
+    </div>
+</article>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "journal/base.html" %}
+{% block title %}Дневник путешествий{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="h3 mb-0">Путешествия пользователей</h1>
+    {% if user.is_authenticated %}<a class="btn btn-primary" href="{% url 'travel_create' %}">Добавить путешествие</a>{% endif %}
+</div>
+<div class="row g-3">
+    {% for travel in travels %}
+        <div class="col-md-6">
+            <article class="card h-100 shadow-sm">
+                <div class="card-body d-flex flex-column">
+                    <div class="d-flex justify-content-between gap-3">
+                        <h2 class="h5">{{ travel.title }}</h2>
+                        {% if user == travel.author %}<span class="badge text-bg-secondary align-self-start">Моя запись</span>{% endif %}
+                    </div>
+                    <p class="text-secondary">{{ travel.country }}, {{ travel.city }} · {{ travel.author.username }}</p>
+                    <p class="small">{{ travel.start_date|date:"d.m.Y" }}–{{ travel.end_date|date:"d.m.Y" }} · {{ travel.duration_days }} дн.</p>
+                    <p>{{ travel.notes|truncatechars:180 }}</p>
+                    <div class="mt-auto d-flex justify-content-between align-items-center">
+                        <strong>{{ travel.cost }} ₽</strong>
+                        <a class="btn btn-primary btn-sm" href="{% url 'travel_detail' travel.pk %}">Подробнее</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    {% empty %}
+        <div class="col-12"><div class="alert alert-light border">Записей пока нет.</div></div>
+    {% endfor %}
+</div>
+{% endblock %}

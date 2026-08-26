@@ -1,0 +1,38 @@
+body {
+    background: #f6f7f9;
+}
+
+main {
+    max-width: 1000px;
+}
+
+form p label {
+    display: block;
+    margin-bottom: .35rem;
+    font-weight: 600;
+}
+
+form p input,
+form p textarea,
+form p select {
+    display: block;
+    width: 100%;
+    padding: .5rem .75rem;
+    border: 1px solid #ced4da;
+    border-radius: .375rem;
+}
+
+.helptext {
+    display: block;
+    margin-top: .25rem;
+    color: #6c757d;
+    font-size: .875rem;
+}
+
+.errorlist {
+    color: #b02a37;
+}
+
+.content-text {
+    line-height: 1.7;
+}
